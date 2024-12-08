@@ -14,10 +14,10 @@
 
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <!-- Nhúng swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/swiper.css">
 </head>
 <body>
     <!-- ai làm khúc này -->
@@ -86,7 +86,6 @@
         </div>
         <div class="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0">
             <div class="swiper testimonial-01 mb-20 pb-22.5">
-                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
@@ -320,7 +319,7 @@
             <div class="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
                 <div class="animate_top group rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection" style="opacity:0;transform:translateY(-20px) translateZ(0)">
                     <a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="#">
-                        <img alt="Exploring MERN Stack: Powering Modern Web Development" loading="lazy" decoding="async" data-nimg="fill" class="duration-300 group-hover:scale-110" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="" src=""/>
+                        <img alt="Exploring MERN Stack: Powering Modern Web Development" loading="lazy" decoding="async" data-nimg="fill" class="duration-300 group-hover:scale-110" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="./images/blog/camera.jpg" src="./images/blog/camera.jpg"/>
                     </a>
                     <div class="px-4">
                         <h3 class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary xl:text-itemtitle2">
@@ -331,7 +330,7 @@
                 </div>
                 <div class="animate_top group rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection" style="opacity:0;transform:translateY(-20px) translateZ(0)">
                     <a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="/blog/best-ui-components-for-modern-websites">
-                        <img alt="Best UI components for modern website" loading="lazy" decoding="async" data-nimg="fill" class="duration-300 group-hover:scale-110" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet=""/>
+                        <img alt="Best UI components for modern website" loading="lazy" decoding="async" data-nimg="fill" class="duration-300 group-hover:scale-110" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="./images/blog/computer.jpg" src="./images/blog/computer.jpg"/>
                     </a>
                     <div class="px-4">
                         <h3 class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary xl:text-itemtitle2">
@@ -342,7 +341,7 @@
                 </div>
                 <div class="animate_top group rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection" style="opacity:0;transform:translateY(-20px) translateZ(0)">
                     <a class="relative block aspect-[368/239] overflow-hidden rounded-lg" href="/blog/the-power-of-uiux-elevating-digital-experiences">
-                        <img alt="The Power of UI/UX: Elevating Digital Experiences" loading="lazy" decoding="async" data-nimg="fill" class="duration-300 group-hover:scale-110" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="" src=""/>
+                        <img alt="The Power of UI/UX: Elevating Digital Experiences" loading="lazy" decoding="async" data-nimg="fill" class="duration-300 group-hover:scale-110" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="" src="./images/blog/ui-ux.jpg"/>
                     </a>
                     <div class="px-4">
                         <h3 class="mb-3.5 mt-7.5 line-clamp-2 text-lg font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary xl:text-itemtitle2">
@@ -510,31 +509,44 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-        const swiper = new Swiper('.testimonial-01', {
-            spaceBetween: 50,
+    <div class="fixed bottom-8 right-8 z-[99]">
+        <div 
+            aria-label="scroll to top" 
+            class="hover:shadow-signUp flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80"
+            id="scrollToTopButton">
+            <span class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
+        </div>
+    </div>
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".testimonial-01", {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
             slidesPerView: 2,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            modules: [Swiper.Autoplay, Swiper.Pagination],
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-            },
-        });
-    </script>
+        },
+        }
+    });
+  </script>
+
+  <!-- Scroll to Top -->
+   <script src="./js/scrollToTop.js"></script>
     <!-- end -->
 </body>
 </html>
