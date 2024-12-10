@@ -16,29 +16,105 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+    <!-- Line Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./css/index.css" />
     <!-- Nhúng swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/swiper.css">
 </head>
-<body>
+<body class="dark:bg-black">
     <!-- Trường làm khúc này -->
-    <header>
-        <div class="container flex justify-between py-7">
-            <img alt="logo" class="" src="./images/logo-light.svg">
-            <nav class="space-x-5 flex items-center">
-                <a href="#" class="text-blue-500">Home</a>
-                <a href="#" class="hover:text-blue-500">Features</a>
-                <a href="#" class="hover:text-blue-500">Blog</a>
-                <a href="#" class="hover:text-blue-500">Docs</a>
-                <a href="#" class="hover:text-blue-500">Pages</a>
-                <a href="#" class="hover:text-blue-500">Support</a>
-            </nav>
-            <div class="flex items-center gap-6">
-                <i class="fa fa-search"></i>
-                <img src="./images/icon-moon.svg" />
-                <a>Sign in</a>
-                <a class="rounded-full bg-blue-600 px-7.5 py-2.5 text-white">Sign up</a>
+    <header id="header" class="fixed left-0 top-0 z-999 w-full py-7">
+        <div class="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+            <div class="flex w-full items-center justify-between xl:w-1/4">
+                <a href="#">
+                    <img alt="logo" loading="lazy" width="119.03" height="30" decoding="async" data-nimg="1" class="hidden w-full dark:block" style="color:transparent" src="./images/logo/logo-dark.svg"/>
+                    <img alt="logo" loading="lazy" width="119.03" height="30" decoding="async" data-nimg="1" class="w-full dark:hidden" style="color:transparent" src="./images/logo/logo-light.svg"/>
+                </a>
+                <button aria-label="button for menu toggle" class="block xl:hidden">
+                    <span class="relative block h-5.5 w-5.5 cursor-pointer">
+                        <span class="du-block absolute right-0 h-full w-full">
+                            <span class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white !w-full delay-300"></span>
+                            <span class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white delay-400 !w-full"></span>
+                            <span class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white !w-full delay-500"></span>
+                        </span>
+                        <span class="du-block absolute right-0 h-full w-full rotate-45">
+                            <span class="absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white !h-0 delay-[0]"></span>
+                            <span class="delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white dealy-200 !h-0"></span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+            <div class="invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false">
+                <nav>
+                    <ul class="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+                        <li>
+                            <a class="text-primary hover:text-primary" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary" href="#">Features</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary" href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary" href="#">Docs</a>
+                        </li>
+                        <li class="group relative">
+                            <button class="flex cursor-pointer items-center justify-between gap-3 hover:text-primary">
+                                Pages
+                                <span>
+                                    <i class="la la-angle-down"></i>
+                                </span>
+                            </button>
+                            <ul class="dropdown ">
+                                <li class="hover:text-primary">
+                                    <a href="#">Blog Grid</a>
+                                </li>
+                                <li class="hover:text-primary">
+                                    <a href="#">Sign In</a>
+                                </li>
+                                <li class="hover:text-primary">
+                                    <a href="#">Sign Up</a>
+                                </li>
+                                <li class="hover:text-primary">
+                                    <a href="#">Docs</a>
+                                </li>
+                                <li class="hover:text-primary">
+                                    <a href="#">Support</a>
+                                </li>
+                                <li class="hover:text-primary">
+                                    <a href="#">404</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary" href="#">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="ml-auto mt-7 flex items-center gap-6 xl:mt-0">
+                    <button class="hidden h-[38px] w-[38px] items-center justify-center rounded-full bg-white text-waterloo dark:bg-black sm:flex">
+                        <svg width="20" height="20" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_369_1884)">
+                                <path d="M16.9347 15.3963L12.4816 11.7799C14.3168 9.26991 14.1279 5.68042 11.8338 3.41337C10.6194 2.19889 9.00003 1.52417 7.27276 1.52417C5.54549 1.52417 3.92617 2.19889 2.71168 3.41337C0.201738 5.92332 0.201738 10.0256 2.71168 12.5355C3.92617 13.75 5.54549 14.4247 7.27276 14.4247C8.91907 14.4247 10.4574 13.804 11.6719 12.6975L16.179 16.3409C16.287 16.4219 16.4219 16.4759 16.5569 16.4759C16.7458 16.4759 16.9077 16.3949 17.0157 16.26C17.2316 15.9901 17.2046 15.6122 16.9347 15.3963ZM7.27276 13.2102C5.86935 13.2102 4.5739 12.6705 3.57532 11.6719C1.52418 9.62076 1.52418 6.30116 3.57532 4.27701C4.5739 3.27843 5.86935 2.73866 7.27276 2.73866C8.67617 2.73866 9.97162 3.27843 10.9702 4.27701C13.0213 6.32815 13.0213 9.64775 10.9702 11.6719C9.99861 12.6705 8.67617 13.2102 7.27276 13.2102Z" fill="currentColor"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_369_1884">
+                                    <rect width="17.2727" height="17.2727" fill="white" transform="translate(0.363647 0.363647)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <button aria-label="theme toggler" class="bg-gray-2 dark:bg-dark-bg absolute right-17 mr-1.5 flex cursor-pointer items-center justify-center rounded-full text-black dark:text-white lg:static">
+                        <img alt="logo" loading="lazy" width="21" height="21" decoding="async" data-nimg="1" class="dark:hidden" style="color:transparent" src="./images/icon/icon-moon.svg"/>
+                        <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1" class="hidden dark:block" style="color:transparent" src="./images/icon/icon-sun.svg"/>
+                    </button>
+                    <a class="text-regular font-medium text-waterloo hover:text-primary" href="#">Sign In</a>
+                    <a class="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho" href="#">Sign Up</a>
+                </div>
             </div>
         </div>
     </header>
@@ -200,7 +276,7 @@
     </section>
     <!-- end -->
 
-    <!-- ai làm khúc này -->
+    <!-- Trường làm khúc này -->
     <section>
         <div class="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
             <div class="flex items-center gap-8 lg:gap-32.5">
@@ -224,11 +300,245 @@
             </div>
         </div>
     </section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+
+    <section class="relative pb-20 pt-18.5 lg:pb-22.5">
+        <div class="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <div class="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
+                <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-light.svg"/>
+                <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-dark.svg"/>
+            </div>
+            <div class="animate_top mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-12.5" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                <div class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 dark:border-strokedark md:w-auto md:border-0 xl:px-13.5 xl:py-5 active before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-tl-[4px] before:rounded-tr-[4px] before:bg-primary">
+                    <div class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                        <p class="text-metatitle3 font-medium text-black dark:text-white">01</p>
+                    </div>
+                    <div class="md:w-3/5 lg:w-auto">
+                        <button class="text-sm font-medium text-black dark:text-white xl:text-regular">Clean User Interface</button>
+                    </div>
+                </div>
+                <div class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 dark:border-strokedark md:w-auto md:border-0 xl:px-13.5 xl:py-5 ">
+                    <div class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                        <p class="text-metatitle3 font-medium text-black dark:text-white">02</p>
+                    </div>
+                    <div class="md:w-3/5 lg:w-auto">
+                        <button class="text-sm font-medium text-black dark:text-white xl:text-regular">Essential Business Pages</button>
+                    </div>
+                </div>
+                <div class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 dark:border-strokedark md:w-auto md:border-0 xl:px-13.5 xl:py-5 ">
+                    <div class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                        <p class="text-metatitle3 font-medium text-black dark:text-white">03</p>
+                    </div>
+                    <div class="md:w-3/5 lg:w-auto">
+                        <button class="text-sm font-medium text-black dark:text-white xl:text-regular">Fully Functional Integrations</button>
+                    </div>
+                </div>
+            </div>
+            <div class="animate_top mx-auto max-w-c-1154" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                <div class="block">
+                    <div class="flex items-center gap-8 lg:gap-19">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">Solid UI with Solid Features.</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img alt="Solid UI with Solid Features." loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="./images/features/features-light-01.png"/>
+                            <img alt="Solid UI with Solid Features." loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/features/features-dark-01.svg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden">
+                    <div class="flex items-center gap-8 lg:gap-19">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">Pages and UI Components You Need for a SaaS.</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="./images/features/features-light-01.png"/>
+                            <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/features/features-dark-01.svg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden">
+                    <div class="flex items-center gap-8 lg:gap-19">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">Functional Blog, DB, Auth and Many More</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" srcSet="./images/features/features-light-01.png"/>
+                            <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/features/features-dark-01.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
+        <div class="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5">
+            <img alt="Man" loading="lazy" width="335" height="384" decoding="async" data-nimg="1" class="absolute -left-15 -top-25 -z-1 lg:left-0" style="color:transparent" srcSet="./images/shape/shape-04.png" src="./images/shape/shape-04.png"/>
+            <img alt="Doodle" loading="lazy" width="132" height="132" decoding="async" data-nimg="1" class="absolute bottom-0 right-0 -z-1" style="color:transparent" srcSet="./images/shape/shape-05.png" src="./images/shape/shape-05.png"/>
+            <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill" class="absolute left-0 top-0 -z-1 dark:hidden" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-light-02.svg"/>
+            <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill" class="absolute left-0 top-0 -z-1 hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-dark-02.svg"/>
+            <div class="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                <h2 class="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">Trusted by Global Companies.</h2>
+                <p class="mx-auto lg:w-11/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 lg:gap-42.5">
+                <div class="animate_top text-center" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">500K</h3>
+                    <p class="text-lg lg:text-para2">World Wide Clients</p>
+                </div>
+                <div class="animate_top text-center" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">1M+</h3>
+                    <p class="text-lg lg:text-para2">Downloads</p>
+                </div>
+                <div class="animate_top text-center" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">865</h3>
+                    <p class="text-lg lg:text-para2">Winning Award</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+            <div class="animate_top mx-auto text-center" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <span class="text-sectiontitle font-medium text-black dark:text-white">INTEGRATIONS</span>
+                </div>
+                <h2 class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">Packed with all the key integrations you need</h2>
+                <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+        </div>
+        <div class="pattern-dots pattern-blue-500 pattern-bg-white pattern-size-4 pattern-opacity-10 relative z-50 mx-auto mt-15 max-w-c-1154 px-4 md:px-8 xl:mt-20 xl:px-0">
+            <div class="absolute -top-3/4 left-0 right-0 -z-1 mx-auto h-full w-full">
+                <img alt="Dotted" loading="lazy" width="1200" height="400" decoding="async" data-nimg="1" class="dark:hidden" style="color:transparent;position:static" src="./images/shape/shape-dotted-light.svg"/>
+                <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-dark.svg"/>
+            </div>
+            <div class="flex flex-wrap justify-around gap-y-10">
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="./images/brand/brand-07.svg"/>
+                    </div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)"></div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="./images/brand/brand-08.svg"/>
+                    </div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="h-[11px] w-[11px] rounded-full bg-[#FFDB26]"></div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="./images/brand/brand-09.svg"/>
+                    </div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)"></div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="h-[15px] w-[15px] rounded-full bg-[#62E888]"></div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="./images/brand/brand-10.svg"/>
+                    </div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="h-[23px] w-[23px] rounded-full bg-[#EF5C00]"></div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="./images/brand/brand-11.svg"/>
+                    </div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="h-[15px] w-[15px] rounded-full bg-[#016BFF]"></div>
+                </div>
+                <div class="animate_top w-1/6" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="./images/brand/brand-12.svg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
+        <div class="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
+            <div class="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
+                <div class="animate_left md:w-[70%] lg:w-1/2" style="opacity:0;transform:translateX(-20px) translateZ(0)">
+                    <h2 class="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">Join With Us Today &amp;Increase Your Productivity</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+                </div>
+                <div class="animate_right lg:w-[45%]" style="opacity:0;transform:translateX(20px) translateZ(0)">
+                    <div class="flex items-center justify-end xl:justify-between">
+                        <img alt="Saly" loading="lazy" width="299" height="299" decoding="async" data-nimg="1" class="hidden xl:block" style="color:transparent" srcSet="./images/shape/shape-06.png" src="./images/shape/shape-06.png"/>
+                        <a href="#" class="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black">
+                            Sign up free
+                            <span class="pl-2.5">
+                                <i class="fa fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+        <div class="relative mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
+            <div class="absolute -bottom-16 -z-1 h-full w-full">
+                <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-light.svg"/>
+                <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="./images/shape/shape-dotted-light.svg"/>
+            </div>
+            <div class="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
+                <div class="animate_left md:w-2/5 lg:w-1/2" style="opacity:0;transform:translateX(-20px) translateZ(0)">
+                    <span class="font-medium uppercase text-black dark:text-white">OUR FAQS</span>
+                    <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
+                        Frequently Asked<span class="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">Questions</span>
+                    </h2>
+                    <a href="#" class="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary">
+                        <span class="duration-300 group-hover:pr-2">Know More</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="animate_right md:w-3/5 lg:w-1/2" style="opacity:0;transform:translateX(20px) translateZ(0)">
+                    <div class="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
+                        <div class="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
+                            <button class="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium text-black dark:text-white lg:px-9 lg:py-7.5">
+                                Lorem ipsum dolor sit amet, consectetur
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            <p class="border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-7.5 block">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
+                        </div>
+                        <div class="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
+                            <button class="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium text-black dark:text-white lg:px-9 lg:py-7.5">
+                                Lorem ipsum dolor sit amet, consectetur
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            <p class="border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-7.5 hidden">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
+                        </div>
+                        <div class="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
+                            <button class="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium text-black dark:text-white lg:px-9 lg:py-7.5">
+                                Lorem ipsum dolor sit amet, consectetur
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            <p class="border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-7.5 hidden">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- end -->
 
     <!-- Trường làm khúc này -->
@@ -236,7 +546,7 @@
         <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
             <div class="animate_top mx-auto text-center">
                 <div class="animate_top mx-auto text-center" style="opacity:0; transform: translateY(-20px) translateZ(0)">
-                    <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:border-blacksection">
+                    <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
                         <span class="text-sectiontitle font-medium text-black dark:text-white">TESTIMONIALS</span>
                     </div>
                     <h2 class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">Client's Testimonials</h2>
@@ -706,7 +1016,16 @@
     });
   </script>
 
-  <!-- Scroll to Top -->
+    <!-- Sticky Menu -->
+   <script src="./js/stickyMenu.js"></script>
+
+    <!-- Toggle Menu -->
+   <script src="./js/toggleMenu.js"></script>
+
+   <!-- Dark Mode -->
+   <script src="./js/darkMode.js"></script>
+
+    <!-- Scroll to Top -->
    <script src="./js/scrollToTop.js"></script>
     <!-- end -->
 </body>
